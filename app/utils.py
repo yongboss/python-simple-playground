@@ -9,3 +9,7 @@ def is_palindrome(s):
 def chunk(xs, n):
     """Split xs into lists of size n."""
     return [xs[i:i + n] for i in range(0, len(xs), n)]
+
+def flatten(xss):
+    """Flatten one level of nesting."""
+    return [x for xs in xss for x in xs]
