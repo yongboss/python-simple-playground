@@ -13,3 +13,13 @@ def chunk(xs, n):
 def flatten(xss):
     """Flatten one level of nesting."""
     return [x for xs in xss for x in xs]
+
+def dedupe(xs):
+    """Remove duplicates, keeping order."""
+    seen = set()
+    out = []
+    for x in xs:
+        if x not in seen:
+            seen.add(x)
+            out.append(x)
+    return out
