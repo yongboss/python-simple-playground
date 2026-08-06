@@ -23,3 +23,7 @@ def dedupe(xs):
             seen.add(x)
             out.append(x)
     return out
+
+def clamp(v, lo, hi):
+    """Constrain v to [lo, hi]."""
+    return max(lo, min(v, hi))
